@@ -17,6 +17,10 @@ botaoTema.addEventListener("click", () => {
 const temaSalvo = localStorage.getItem("tema");
 if (temaSalvo) {
   html.setAttribute("data-theme", temaSalvo);
+} else {
+  // sem preferencia salva, usa o que o sistema do usuario ja configurou
+  const prefereEscuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  html.setAttribute("data-theme", prefereEscuro ? "dark" : "light");
 }
 
 atualizarTextoBotao();
