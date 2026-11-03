@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f4f5f7;
+  border-bottom: 1px solid #ddd;
+}
+
+#botao-tema {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.conteudo {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.intro {
+  margin-bottom: 32px;
+  color: #555;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.post h2 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.rodape {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 14px;
+}
