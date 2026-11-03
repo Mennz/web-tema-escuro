@@ -8,8 +8,15 @@ function atualizarTextoBotao() {
 
 botaoTema.addEventListener("click", () => {
   const atual = html.getAttribute("data-theme");
-  html.setAttribute("data-theme", atual === "dark" ? "light" : "dark");
+  const novoTema = atual === "dark" ? "light" : "dark";
+  html.setAttribute("data-theme", novoTema);
+  localStorage.setItem("tema", novoTema);
   atualizarTextoBotao();
 });
+
+const temaSalvo = localStorage.getItem("tema");
+if (temaSalvo) {
+  html.setAttribute("data-theme", temaSalvo);
+}
 
 atualizarTextoBotao();
